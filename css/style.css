@@ -13,11 +13,14 @@ body{
     padding-left: 156px;
     padding-right: 140px;
     background-color: #43ec6b;
+    width: auto;
 }
 
 .banner{
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 
 }
 .banner-text{
@@ -205,3 +208,70 @@ body{
     text-align: center;
     font-size: 13px;
 }
+
+/* media query */
+
+@media only screen and (max-width: 668px) {
+    .container-one {
+      
+      width: auto;
+    }
+    .banner{
+        
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    
+
+    .container-two{
+        width: 100%;
+    }
+
+    .players{
+        grid-template-columns: repeat(1,1fr)
+    }
+
+    
+    .cta h2 {
+        font-size: 30px;
+        text-align: center;
+        
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 26px;
+    }
+  }
+
+  @media only screen and (min-width: 668px) and (max-width: 1024px) {
+    .container-one {
+      
+        width: 100%;
+      }
+      
+  
+      .container-two{
+          width: 100%;
+      }
+  
+      .players{
+          grid-template-columns: repeat(2,1fr)
+      }
+  
+      
+      .cta h2 {
+          font-size: 30px;
+          text-align: center;
+          
+      }
+  
+      .blogs {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-row-gap: 26px;
+      }
+  }
